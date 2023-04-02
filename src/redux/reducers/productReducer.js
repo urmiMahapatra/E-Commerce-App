@@ -1,7 +1,7 @@
 import {ActionTypes} from '../constants/action-types';
 
 const initialState={
-    products :[
+    products:[
         {
             id:1,
             title:"clutch",
