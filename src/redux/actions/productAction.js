@@ -12,9 +12,8 @@ export const selectedProduct = (product)=>{
         payload: product,
     };
 };
-// export const removeProducts = (products)=>{
-//     return{
-//         type: ActionTypes.REMOVE_SELECTED_PRODUCT,
-//         payload: products,
-//     };
-// };
+export const removeSelectedProduct = ()=>{
+    return{
+        type: ActionTypes.REMOVE_SELECTED_PRODUCT,
+    };
+};

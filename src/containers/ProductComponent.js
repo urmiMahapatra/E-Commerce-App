@@ -7,7 +7,7 @@ const ProductComponent = () =>{
     const renderList = products.map((product)=>{ 
       const{id,title,image,price,category,rating} = product;
     return(
-    <div className="four coloumn wide" key={id}>
+    <div className="four wide column" key={id}>
       <Link to ={`/product/${id}`}>
     <div className="ui link cards">
         <div className="card">
