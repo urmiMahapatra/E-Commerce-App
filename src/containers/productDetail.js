@@ -11,16 +11,19 @@ import{selectedProduct, removeSelectedProduct} from "../redux/actions/productAct
         let product = useSelector((state) =>state.product);
         const {image,title,description,price,category}= product;
         const dispatch = useDispatch();
-        console.log(productId);
+        console.log(product);
 
     const fetchProductDetail = async (id) =>{
         const response = await axios
         .get(`https://fakestoreapi.com/products/${id}`)
+        
         .catch((err)=>{
             console.log("Err",err);
-    });
+           
+    });   
     dispatch(selectedProduct(response.data));
     };
+ 
     useEffect(() =>{
         if(productId && productId !=="") fetchProductDetail(productId);
         return()=>{

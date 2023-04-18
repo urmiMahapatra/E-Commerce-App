@@ -26,14 +26,9 @@ const ProductComponent = () =>{
     </div>
  
  );
- 
-
     });
-
-  
-   return (
-    <>{renderList}</>
-    );
+ return (
+    <>{renderList}</>);
 
 };
 
