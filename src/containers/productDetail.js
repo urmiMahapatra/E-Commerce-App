@@ -66,4 +66,3 @@ import{selectedProduct, removeSelectedProduct} from "../redux/actions/productAct
   };
   
   export default ProductDetail;
-  

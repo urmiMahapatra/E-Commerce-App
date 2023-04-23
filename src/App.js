@@ -1,4 +1,3 @@
-
 import './App.css';
  import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Header from './containers/header';
@@ -12,7 +11,7 @@ function App() {
      <Header/>
      <Routes>
      <Route path ="/" exact element={<ProductList/> }/>
-     <Route path ="/product/:productsId" exact element={ <ProductDetail/> }/>
+     <Route path ="/product/:productId" exact element={ <ProductDetail/> }/>
      <Route>404 NOT FOUND!</Route>
      </Routes>
     </Router> 
@@ -22,4 +21,3 @@ function App() {
 }
 
 export default App;
-
