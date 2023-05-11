@@ -23,6 +23,29 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.add-to-cart{
+  width: 80px;
+  position: relative;
+  right: 1%;
+  top: 5px;
+   color: red;
+  align-items: center;
+  font-size: calc(15px + 2vmin);
+}
+.cart-count{
+  position: absolute;
+  top: 1px;
+  right: 8px;
+  width: px;
+  z-index: 2;
+  border: 3px solid #111b04;
+  border-radius: 30%;
+  display:inline-block;
+  font-size: calc(1px + 2vmin);
+  color: rgb(20, 20, 20);
+
+
+}
 
 .App-link {
   color: #61dafb;

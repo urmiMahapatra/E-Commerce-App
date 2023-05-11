@@ -23,7 +23,7 @@ const ProductList = () => {
 
     return (
           <div className="ui grid container">
-            {/* <h1>productList</h1> */}
+            <h1>productList</h1>
            <ProductComponent/>
         </div>
     );
