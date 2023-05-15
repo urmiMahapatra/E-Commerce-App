@@ -32,8 +32,8 @@ import { addToCart } from "./cartSlice";
         };
     },[productId]);
 
-    const handleAddtoCart=(productId) =>{
-      dispatch(addToCart(productId));
+    const handleAddtoCart=(product) =>{
+      dispatch(addToCart(product));
     };
     
 
@@ -60,7 +60,7 @@ import { addToCart } from "./cartSlice";
                     <div className="visible content">
                       <i className="shop icon"></i>
                     </div>
-                    <button className="hidden content" onClick={()=> handleAddtoCart(productId)}>Add to Cart</button>
+                    <button className="hidden content" onClick={()=> handleAddtoCart(product)}>Add to Cart</button>
                   </div>
                 </div>
               </div>
