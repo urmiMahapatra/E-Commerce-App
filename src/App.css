@@ -31,6 +31,7 @@
    color: red;
   align-items: center;
   font-size: calc(15px + 2vmin);
+  
 }
 .cart-count{
   position: absolute;
@@ -40,12 +41,13 @@
   z-index: 2;
   border: 3px solid #111b04;
   border-radius: 30%;
+  font-size:calc(1px + 2vmin);
   display:inline-block;
-  font-size: calc(1px + 2vmin);
   color: rgb(20, 20, 20);
 
 
 }
+
 
 .App-link {
   color: #61dafb;

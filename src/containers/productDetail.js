@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import{selectedProduct, removeSelectedProduct} from "../redux/actions/productAction";
 import { addToCart } from "./cartSlice";
-
+import {useNavigate} from "react-router";
+import {cart} from "./cart";
 
 
     const ProductDetail =()=>{
@@ -12,6 +13,7 @@ import { addToCart } from "./cartSlice";
         let product = useSelector((state) =>state.product);
         const {image,title,description,price,category}= product;
         const dispatch = useDispatch();
+        const navigate = useNavigate();
         console.log(product);
 
     const fetchProductDetail = async (id) =>{
@@ -34,6 +36,7 @@ import { addToCart } from "./cartSlice";
 
     const handleAddtoCart=(product) =>{
       dispatch(addToCart(product));
+      navigate.push("./cart");
     };
     
 
