@@ -1,14 +1,21 @@
 import { useSelector,useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import{removeFromCart} from "./cartSlice";
+import{addToCart, removeFromCart} from "./cartSlice";
+import {decreaseCart} from "./cartSlice";
 import Product from "./ProductComponent";
  
  const Cart =()=>{
     const cart = useSelector((state) => state.cart);
    const dispatch =useDispatch();
-    const handleRemoveFromCart =(cartItem) =>{dispatch(removeFromCart(cartItem))
-
-   }
+    const handleRemoveFromCart =(cartItem) =>{dispatch(removeFromCart(cartItem));
+    
+   };
+   const handleDecreaseCart =(cartItem)=>{
+    dispatch(decreaseCart(cartItem));
+};
+const handleIncreaseCart =(cartItem)=>{
+    dispatch(addToCart(cartItem));
+};
     return(
         <div className="cart-container">
             <h2>SHOPPING CART</h2>
@@ -45,9 +52,9 @@ import Product from "./ProductComponent";
                            </div>
                            <div className="cart-product-price">${cartItem.price}</div>
                            <div className="cart-product-quantity">
-                            <button>-</button>
+                            <button onClick={()=>handleDecreaseCart(cartItem)}>-</button>
                             <div className="count">{cartItem.cartQuantity}</div>
-                            <button>+</button>
+                            <button onClick={()=>handleIncreaseCart(cartItem)}>+</button>
                            </div>
                            <div className="cart-product-total-price">${cartItem.price*cartItem.cartQuantity}</div>
                            </div>  
