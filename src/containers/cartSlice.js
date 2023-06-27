@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { json } from "react-router-dom";
 import {toast} from "react-toastify";
 
 const initialState={
@@ -27,8 +28,15 @@ const cartSlice= createSlice({
             }
             localStorage.setItem("cartItems",JSON.stringify(state.cartItems));
         },
+        removeFromCart(state,action){
+          const nextCartItems=  state.cartItems.filter(cartItem=>cartItem.id !== action.payload.id);
+          state.cartItems=nextCartItems;
+          localStorage.setItem("cartItems" ,JSON.stringify(state.cartItems));
+          toast.error(`${action.payload.title} Removed From Cart`,{position : "top-right",color:"red"});
+
+        },
 
     },
 });
-export const {addToCart} = cartSlice.actions;
+export const {addToCart,removeFromCart} = cartSlice.actions;
 export default cartSlice.reducer;
